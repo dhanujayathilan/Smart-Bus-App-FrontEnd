@@ -17,6 +17,7 @@ const BusManagementSystem = () => {
     city: '',
     district: '',
     nic: '',
+      licenseFile: null,
     licenseNumber: '',
     licenseExpiry: '',
     experience: '',
@@ -47,6 +48,16 @@ const BusManagementSystem = () => {
     }
   };
 
+  const handleFileUpload = (e) => {
+  const file = e.target.files[0];
+    if (file) {
+      setFormData({
+        ...formData,
+        licenseFile: file
+      });
+    }
+  };
+
   const handleRegister = () => {
     console.log('Registration data:', formData);
     alert('Driver registered successfully!');
@@ -66,6 +77,7 @@ const BusManagementSystem = () => {
       city: '',
       district: '',
       nic: '',
+      licenseFile: null,
       licenseNumber: '',
       licenseExpiry: '',
       experience: '',
@@ -289,6 +301,19 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
+          <div className="row">
+            <div className="form-group">
+              <label>Upload License Copy:</label>
+              <input
+                type="file"
+                name="licenseFile"
+                accept=".jpg,.jpeg,.png,.pdf"
+                onChange={(e) => handleFileUpload(e)}
+              />
+            </div>
+          </div>
+
+
           <div className="full-width">
             <label>Please provide details about your previous employment:</label>
             <textarea
@@ -302,7 +327,7 @@ const BusManagementSystem = () => {
             <button className="back-button" onClick={()=>navigate("/")}>
               Back
             </button>
-            <button className="register-button" onClick={()=>navigate("/")}>
+            <button className="register-button" onClick={()=>navigate("/admindashboard")}>
               Register
             </button>
           </div>

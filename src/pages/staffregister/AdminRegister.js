@@ -217,7 +217,7 @@ const BusManagementSystem = () => {
             <button className="back-button" onClick={()=>navigate("/")}>
               Back
             </button>
-            <button className="register-button" onClick={()=>navigate("/")}>
+            <button className="register-button" onClick={()=>navigate("/admindashboard")}>
               Register
             </button>
           </div>
