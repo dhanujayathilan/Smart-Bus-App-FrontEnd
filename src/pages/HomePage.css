@@ -1,0 +1,83 @@
+/* src/pages/HomePage.css */
+.home-container {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.home-header h1 {
+  font-size: 24px;
+  color: #0077b6;
+}
+
+.nav-buttons .nav-btn {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.nav-btn.primary {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+}
+
+.nav-btn.primary:hover {
+  background-color: #005f8f;
+}
+
+.hero-section {
+  text-align: center;
+  margin: auto;
+  padding: 60px 20px;
+  max-width: 700px;
+}
+
+.hero-section h2 {
+  font-size: 36px;
+  color: #023e8a;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #38b000;
+  color: white;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  background-color: #2d8700;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  background-color: #f2f2f2;
+  margin-top: auto;
+}
