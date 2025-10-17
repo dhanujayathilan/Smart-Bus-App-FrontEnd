@@ -11,10 +11,8 @@ const BusManagementSystem = () => {
     email: '',
     addressLine1: '',
     addressLine2: '',
-    dob: '',
     staffType: 'Admin',
-    licenseNumber: '',
-    licenseExpiry: '',
+    designation: '',
     experience: '',
     previousEmployment: ''
   });
@@ -56,10 +54,8 @@ const BusManagementSystem = () => {
       email: '',
       addressLine1: '',
       addressLine2: '',
-      dob: '',
       staffType: 'Admin',
-      licenseNumber: '',
-      licenseExpiry: '',
+      designation: '',
       experience: '',
       previousEmployment: ''
     });
@@ -184,37 +180,14 @@ const BusManagementSystem = () => {
 
           <div className="row">
             <div className="form-group">
-              <label>Date of Birth:</label>
-              <input
-                type="text"
-                name="dob"
-                placeholder="MM-DD-YYYY"
-                value={formData.dob}
+              <label>Designation: </label>
+              <select
+                name="designation"
+                value={formData.designation}
                 onChange={handleChange}
-              />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="form-group">
-              <label>Driver's License Number:</label>
-              <input
-                type="text"
-                name="licenseNumber"
-                placeholder="Number"
-                value={formData.licenseNumber}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label>Driver's License Expiration Date:</label>
-              <input
-                type="text"
-                name="licenseExpiry"
-                placeholder="MM-DD-YYYY"
-                value={formData.licenseExpiry}
-                onChange={handleChange}
-              />
+              >
+                <option>System Admin</option>
+              </select>
             </div>
           </div>
 

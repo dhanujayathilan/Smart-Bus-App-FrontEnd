@@ -13,8 +13,10 @@ const BusManagementSystem = () => {
     addressLine2: '',
     dob: '',
     staffType: 'Conductor',
-    licenseNumber: '',
-    licenseExpiry: '',
+    gender:'',
+    city: '',
+    district: '',
+    nic: '',
     experience: '',
     previousEmployment: ''
   });
@@ -58,8 +60,10 @@ const BusManagementSystem = () => {
       addressLine2: '',
       dob: '',
       staffType: 'Conductor',
-      licenseNumber: '',
-      licenseExpiry: '',
+      gender:'',
+    city: '',
+    district: '',
+    nic: '',
       experience: '',
       previousEmployment: ''
     });
@@ -197,26 +201,55 @@ const BusManagementSystem = () => {
 
           <div className="row">
             <div className="form-group">
-              <label>Driver's License Number:</label>
+              <label>Gender:</label>
+              <select
+                name="gender"
+                value={formData.gender}
+                onChange={handleChange}
+              >
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="form-group">
+              <label>District: </label>
               <input
                 type="text"
-                name="licenseNumber"
-                placeholder="Number"
-                value={formData.licenseNumber}
+                name="district"
+                placeholder="District"
+                value={formData.district}
                 onChange={handleChange}
               />
             </div>
             <div className="form-group">
-              <label>Driver's License Expiration Date:</label>
+              <label>City: </label>
               <input
                 type="text"
-                name="licenseExpiry"
-                placeholder="MM-DD-YYYY"
+                name="city"
+                placeholder="City"
                 value={formData.licenseExpiry}
                 onChange={handleChange}
               />
             </div>
           </div>
+
+          <div className="row">
+            <div className="form-group">
+              <label>NIC: </label>
+              <input
+                type="text"
+                name="nic"
+                placeholder="NIC"
+                value={formData.nic}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+        
 
           <div className="row">
             <div className="form-group">
@@ -231,7 +264,14 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          
+          <div className="full-width">
+            <label>Please provide details about your previous employment:</label>
+            <textarea
+              name="previousEmployment"
+              value={formData.previousEmployment}
+              onChange={handleChange}
+            />
+          </div>
 
           <div className="button-container">
             <button className="back-button" onClick={()=>navigate("/")}>

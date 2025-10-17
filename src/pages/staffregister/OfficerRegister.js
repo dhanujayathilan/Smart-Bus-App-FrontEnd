@@ -11,10 +11,9 @@ const BusManagementSystem = () => {
     email: '',
     addressLine1: '',
     addressLine2: '',
-    dob: '',
+      designation: '',
+      department: '',
     staffType: 'Officer',
-    licenseNumber: '',
-    licenseExpiry: '',
     experience: '',
     previousEmployment: ''
   });
@@ -56,10 +55,9 @@ const BusManagementSystem = () => {
       email: '',
       addressLine1: '',
       addressLine2: '',
-      dob: '',
+      designation: '',
+      department: '',
       staffType: 'Officer',
-      licenseNumber: '',
-      licenseExpiry: '',
       experience: '',
       previousEmployment: ''
     });
@@ -184,35 +182,25 @@ const BusManagementSystem = () => {
 
           <div className="row">
             <div className="form-group">
-              <label>Date of Birth:</label>
-              <input
-                type="text"
-                name="dob"
-                placeholder="MM-DD-YYYY"
-                value={formData.dob}
+              <label>Designation: </label>
+              <select
+                name="designation"
+                value={formData.designation}
                 onChange={handleChange}
-              />
+              >
+                <option>System Admin</option>
+              </select>
             </div>
           </div>
 
           <div className="row">
             <div className="form-group">
-              <label>Driver's License Number:</label>
+              <label>Department: </label>
               <input
                 type="text"
-                name="licenseNumber"
-                placeholder="Number"
-                value={formData.licenseNumber}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label>Driver's License Expiration Date:</label>
-              <input
-                type="text"
-                name="licenseExpiry"
-                placeholder="MM-DD-YYYY"
-                value={formData.licenseExpiry}
+                name="department"
+                placeholder="Department"
+                value={formData.department}
                 onChange={handleChange}
               />
             </div>
@@ -231,14 +219,6 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="full-width">
-            <label>Please provide details about your previous employment:</label>
-            <textarea
-              name="previousEmployment"
-              value={formData.previousEmployment}
-              onChange={handleChange}
-            />
-          </div>
 
           <div className="button-container">
             <button className="back-button" onClick={()=>navigate("/")}>
