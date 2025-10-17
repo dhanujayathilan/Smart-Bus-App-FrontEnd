@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './staffregister.css'; // Import external CSS
+import './adminregister.css'; // Import external CSS
 import { Link, useNavigate } from 'react-router-dom';
 
 const BusManagementSystem = () => {
@@ -12,7 +12,7 @@ const BusManagementSystem = () => {
     addressLine1: '',
     addressLine2: '',
     dob: '',
-    staffType: 'Driver/Conductor',
+    staffType: 'Admin',
     licenseNumber: '',
     licenseExpiry: '',
     experience: '',
@@ -21,16 +21,31 @@ const BusManagementSystem = () => {
 
   const [activeTab, setActiveTab] = useState('admin');
 
+  // Handle input changes and navigate to conductor page if selected
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
+
+    if (name === 'staffType' && value === 'Driver') {
+      navigate('/driverregister');
+    }
+    if (name === 'staffType' && value === 'Conductor') {
+      navigate('/conductorregister');
+    }
+    if (name === 'staffType' && value === 'Admin') {
+      navigate('/adminregister');
+    }
+    if (name === 'staffType' && value === 'Officer') {
+      navigate('/officerregister');
+    }
   };
 
   const handleRegister = () => {
     console.log('Registration data:', formData);
-    alert('Staff registered successfully!');
+    alert('Driver registered successfully!');
   };
 
   const handleBack = () => {
@@ -42,7 +57,7 @@ const BusManagementSystem = () => {
       addressLine1: '',
       addressLine2: '',
       dob: '',
-      staffType: 'Driver/Conductor',
+      staffType: 'Admin',
       licenseNumber: '',
       licenseExpiry: '',
       experience: '',
@@ -81,6 +96,23 @@ const BusManagementSystem = () => {
         </div>
 
         <div className="form-content">
+
+          <div className="row">
+            <div className="form-group">
+              <label>Staff Type:</label>
+              <select
+                name="staffType"
+                value={formData.staffType}
+                onChange={handleChange}
+              >
+                <option>Driver</option>
+                <option>Conductor</option>
+                <option>Admin</option>
+                <option>Officer</option>
+              </select>
+            </div>
+          </div>
+
           <div className="row">
             <div className="form-group">
               <label>Full Name:</label>
@@ -165,22 +197,6 @@ const BusManagementSystem = () => {
 
           <div className="row">
             <div className="form-group">
-              <label>Staff Type:</label>
-              <select
-                name="staffType"
-                value={formData.staffType}
-                onChange={handleChange}
-              >
-                <option>Driver/Conductor</option>
-                <option>Driver</option>
-                <option>Conductor</option>
-                <option>Maintenance</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="form-group">
               <label>Driver's License Number:</label>
               <input
                 type="text"
@@ -228,7 +244,7 @@ const BusManagementSystem = () => {
             <button className="back-button" onClick={()=>navigate("/")}>
               Back
             </button>
-            <button className="register-button" onClick={()=>navigate("/admindashboard")}>
+            <button className="register-button" onClick={()=>navigate("/")}>
               Register
             </button>
           </div>

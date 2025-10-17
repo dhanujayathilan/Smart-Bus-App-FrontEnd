@@ -16,7 +16,7 @@ export default function LoginPage() {
           <button type="submit" onClick={()=>navigate("/admindashboard")}>Login</button>
         </form>
         <p className="switch-link">
-          Don’t have an account? <Link to="/staffregister"><u>Sign up</u></Link>
+          Don’t have an account? <Link to="/driverregister"><u>Sign up</u></Link>
         </p>
       </div>
     </div>

@@ -48,7 +48,7 @@
 .form-container {
   max-width: 900px;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgb(148, 222, 243);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -88,7 +88,7 @@
 }
 
 label {
-  color: white;
+  color: rgb(44, 43, 43);
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;

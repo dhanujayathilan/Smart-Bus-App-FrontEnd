@@ -1,7 +1,9 @@
 import React from 'react';
 import './admindashboard.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function AdminDashboard() {
+  const navigate = useNavigate();
   return (
     <div className="dashboard-container">
       <h1 className="dashboard-title">Smart Public Bus Management System</h1>
@@ -89,7 +91,7 @@ export default function AdminDashboard() {
               <p className="staff-name">Sunil Silva - Route 245</p>
               <p>Shift: 14:00 - 22:00 | Status: Absent</p>
             </div>
-            <button className="full-button">Register Staff</button>
+            <button className="full-button" onClick={()=>navigate("/driverregister")}>Register Staff</button>
           </div>
         </div>
       </div>
