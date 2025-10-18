@@ -13,6 +13,7 @@ import View_Buses_on_Map from './pages/admin/View_Buses_on_Map';
 import Route_and_Schedule from './pages/admin/Route_and_Schedule';
 import Admin_Send_Alert from './pages/admin/Admin_Send_Alert';
 import View_Analytics from './pages/admin/View_Analytics';
+import Profit_Management from './pages/admin/Profit_Management';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/route_and_schedule" element={<Route_and_Schedule />} />
         <Route path="/admin_send_alert" element={<Admin_Send_Alert />} />
         <Route path="/view_analytics" element={<View_Analytics />} />
+        <Route path="/profit_management" element={<Profit_Management />} />
       </Routes>
     </Router>
   );

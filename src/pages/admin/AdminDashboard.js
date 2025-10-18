@@ -41,7 +41,7 @@ export default function AdminDashboard() {
                 <button onClick={()=>navigate("/admin_send_alert")}>Send Alert</button>
                 <button onClick={()=>navigate("/view_analytics")}>View Analytics</button>
               </div>
-              <button>Profit Management</button>
+              <button onClick={()=>navigate("/profit_management")}>Profit Management</button>
             </div>
           </div>
         </div>
