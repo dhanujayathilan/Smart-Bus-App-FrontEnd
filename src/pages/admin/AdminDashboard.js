@@ -39,7 +39,7 @@ export default function AdminDashboard() {
               <button onClick={()=>navigate("/route_and_schedule")}>Route & Schedule</button>
               <div className="row-buttons">
                 <button onClick={()=>navigate("/admin_send_alert")}>Send Alert</button>
-                <button>View Analytics</button>
+                <button onClick={()=>navigate("/view_analytics")}>View Analytics</button>
               </div>
               <button>Profit Management</button>
             </div>
