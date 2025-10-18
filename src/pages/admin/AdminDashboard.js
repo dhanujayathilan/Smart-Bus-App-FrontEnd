@@ -11,7 +11,7 @@ export default function AdminDashboard() {
       {/* Navigation Tabs */}
       <div className="tabs">
         <button className="tab active">Admin Dashboard</button>
-        <button className="tab">Driver Interface</button>
+        <button className="tab">Staff Interface</button>
         <button className="tab">Passenger Portal</button>
       </div>
 
@@ -36,9 +36,9 @@ export default function AdminDashboard() {
               </div>
             </div>
             <div className="button-group">
-              <button>Route & Schedule</button>
+              <button onClick={()=>navigate("/route_and_schedule")}>Route & Schedule</button>
               <div className="row-buttons">
-                <button>Send Alert</button>
+                <button onClick={()=>navigate("/admin_send_alert")}>Send Alert</button>
                 <button>View Analytics</button>
               </div>
               <button>Profit Management</button>
@@ -61,7 +61,7 @@ export default function AdminDashboard() {
                 <p className="update-info">Last Update: {bus.update} | Passengers: {bus.passengers}</p>
               </div>
             ))}
-            <button className="full-button">View All Buses on Map</button>
+            <button className="full-button" onClick={()=>navigate("/view_buses_on_map")}>View All Buses on Map</button>
           </div>
         </div>
 
