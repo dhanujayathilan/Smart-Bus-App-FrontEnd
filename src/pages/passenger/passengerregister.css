@@ -70,8 +70,8 @@
   padding: 40px;
   background: linear-gradient(
     135deg,
-    rgba(102, 126, 234, 0.1) 0%,
-    rgba(118, 75, 162, 0.1) 100%
+    rgb(153, 68, 179) 0%,
+    rgba(116, 65, 168, 0.862) 100%
   );
 }
 
@@ -85,6 +85,7 @@
 .form-group {
   display: flex;
   flex-direction: column;
+  color: rgb(44, 43, 43);
 }
 
 label {
