@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './adminregister.css'; // Import external CSS
+import './passengerregister.css'; // Import external CSS
 import { Link, useNavigate } from 'react-router-dom';
 
 const BusManagementSystem = () => {
@@ -11,10 +11,11 @@ const BusManagementSystem = () => {
     email: '',
     addressLine1: '',
     addressLine2: '',
-    staffType: 'Admin',
-    designation: '',
-    experience: '',
-    previousEmployment: ''
+    dob: '',
+    gender:'',
+    city: '',
+    district: '',
+    nic: '',
   });
 
   const [activeTab, setActiveTab] = useState('admin');
@@ -26,34 +27,12 @@ const BusManagementSystem = () => {
       ...formData,
       [name]: value
     });
-
-    if (name === 'staffType' && value === 'Driver') {
-      navigate('/driverregister');
-    }
-    if (name === 'staffType' && value === 'Conductor') {
-      navigate('/conductorregister');
-    }
-    if (name === 'staffType' && value === 'Admin') {
-      navigate('/adminregister');
-    }
-    if (name === 'staffType' && value === 'Officer') {
-      navigate('/officerregister');
-    }
   };
 
-  const handleFileUpload = (e) => {
-  const file = e.target.files[0];
-  if (file) {
-    setFormData({
-      ...formData,
-      licenseFile: file
-    });
-  }
-};
 
   const handleRegister = () => {
     console.log('Registration data:', formData);
-    alert('Driver registered successfully!');
+    alert('Staff registered successfully!');
   };
 
   const handleBack = () => {
@@ -64,8 +43,13 @@ const BusManagementSystem = () => {
       email: '',
       addressLine1: '',
       addressLine2: '',
-      staffType: 'Admin',
-      designation: '',
+      dob: '',
+      staffType: 'Conductor',
+      gender:'',
+      city: '',
+      district: '',
+      nic: '',
+      nicFile: null,
       experience: '',
       previousEmployment: ''
     });
@@ -98,26 +82,10 @@ const BusManagementSystem = () => {
 
       <div className="form-container">
         <div className="form-header">
-          <h2 className="form-title">Register Staff</h2>
+          <h2 className="form-title">Register Passenger</h2>
         </div>
 
         <div className="form-content">
-
-          <div className="row">
-            <div className="form-group">
-              <label>Staff Type:</label>
-              <select
-                name="staffType"
-                value={formData.staffType}
-                onChange={handleChange}
-              >
-                <option>Driver</option>
-                <option>Conductor</option>
-                <option>Admin</option>
-                <option>Officer</option>
-              </select>
-            </div>
-          </div>
 
           <div className="row">
             <div className="form-group">
@@ -190,44 +158,72 @@ const BusManagementSystem = () => {
 
           <div className="row">
             <div className="form-group">
-              <label>Designation: </label>
+              <label>Date of Birth:</label>
+              <input
+                type="text"
+                name="dob"
+                placeholder="MM-DD-YYYY"
+                value={formData.dob}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="form-group">
+              <label>Gender:</label>
               <select
-                name="designation"
-                value={formData.designation}
+                name="gender"
+                value={formData.gender}
                 onChange={handleChange}
               >
-                <option>System Admin</option>
+                <option>Male</option>
+                <option>Female</option>
               </select>
             </div>
           </div>
 
           <div className="row">
             <div className="form-group">
-              <label>How Many Years of Experience:</label>
+              <label>District: </label>
               <input
                 type="text"
-                name="experience"
-                placeholder="Number"
-                value={formData.experience}
+                name="district"
+                placeholder="District"
+                value={formData.district}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>City: </label>
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                value={formData.licenseExpiry}
                 onChange={handleChange}
               />
             </div>
           </div>
 
-          <div className="full-width">
-            <label>Please provide details about your previous employment:</label>
-            <textarea
-              name="previousEmployment"
-              value={formData.previousEmployment}
-              onChange={handleChange}
-            />
+          <div className="row">
+            <div className="form-group">
+              <label>NIC: </label>
+              <input
+                type="text"
+                name="nic"
+                placeholder="NIC"
+                value={formData.nic}
+                onChange={handleChange}
+              />
+            </div>
           </div>
 
           <div className="button-container">
-            <button className="back-button" onClick={()=>navigate("/admindashboard")}>
+            <button className="back-button" onClick={()=>navigate("/")}>
               Back
             </button>
-            <button className="register-button" onClick={()=>navigate("/admindashboard")}>
+            <button className="register-button" onClick={()=>navigate("/passengerdashboard")}>
               Register
             </button>
           </div>

@@ -17,6 +17,7 @@ const BusManagementSystem = () => {
     city: '',
     district: '',
     nic: '',
+    nicFile: null,
     experience: '',
     previousEmployment: ''
   });
@@ -45,6 +46,17 @@ const BusManagementSystem = () => {
     }
   };
 
+  const handleFileUpload = (e) => {
+  const file = e.target.files[0];
+    if (file) {
+        setFormData({
+        ...formData,
+        licenseFile: file
+        });
+    }
+    };
+
+
   const handleRegister = () => {
     console.log('Registration data:', formData);
     alert('Staff registered successfully!');
@@ -61,9 +73,10 @@ const BusManagementSystem = () => {
       dob: '',
       staffType: 'Conductor',
       gender:'',
-    city: '',
-    district: '',
-    nic: '',
+      city: '',
+      district: '',
+      nic: '',
+      nicFile: null,
       experience: '',
       previousEmployment: ''
     });
@@ -249,8 +262,6 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-        
-
           <div className="row">
             <div className="form-group">
               <label>How Many Years of Experience:</label>
@@ -260,6 +271,18 @@ const BusManagementSystem = () => {
                 placeholder="Number"
                 value={formData.experience}
                 onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="form-group">
+              <label>Upload NIC Copy:</label>
+              <input
+                type="file"
+                name="nicFile"
+                accept=".jpg,.jpeg,.png,.pdf"
+                onChange={(e) => handleFileUpload(e)}
               />
             </div>
           </div>
@@ -274,7 +297,7 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="button-container">
-            <button className="back-button" onClick={()=>navigate("/")}>
+            <button className="back-button" onClick={()=>navigate("/admindashboard")}>
               Back
             </button>
             <button className="register-button" onClick={()=>navigate("/admindashboard")}>

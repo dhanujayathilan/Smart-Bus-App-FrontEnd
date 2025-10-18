@@ -11,8 +11,11 @@ const BusManagementSystem = () => {
     email: '',
     addressLine1: '',
     addressLine2: '',
-      designation: '',
-      department: '',
+    city: '',
+    district: '',
+    nic: '',
+    designation: '',
+    department: '',
     staffType: 'Officer',
     experience: '',
     previousEmployment: ''
@@ -42,6 +45,16 @@ const BusManagementSystem = () => {
     }
   };
 
+  const handleFileUpload = (e) => {
+  const file = e.target.files[0];
+  if (file) {
+    setFormData({
+      ...formData,
+      licenseFile: file
+    });
+  }
+};
+
   const handleRegister = () => {
     console.log('Registration data:', formData);
     alert('Driver registered successfully!');
@@ -55,6 +68,9 @@ const BusManagementSystem = () => {
       email: '',
       addressLine1: '',
       addressLine2: '',
+      city: '',
+      district: '',
+      nic: '',
       designation: '',
       department: '',
       staffType: 'Officer',
@@ -182,6 +198,42 @@ const BusManagementSystem = () => {
 
           <div className="row">
             <div className="form-group">
+              <label>District: </label>
+              <input
+                type="text"
+                name="district"
+                placeholder="District"
+                value={formData.district}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>City: </label>
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                value={formData.licenseExpiry}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="form-group">
+              <label>NIC: </label>
+              <input
+                type="text"
+                name="nic"
+                placeholder="NIC"
+                value={formData.nic}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="form-group">
               <label>Designation: </label>
               <select
                 name="designation"
@@ -221,7 +273,7 @@ const BusManagementSystem = () => {
 
 
           <div className="button-container">
-            <button className="back-button" onClick={()=>navigate("/")}>
+            <button className="back-button" onClick={()=>navigate("/admindashboard")}>
               Back
             </button>
             <button className="register-button" onClick={()=>navigate("/admindashboard")}>

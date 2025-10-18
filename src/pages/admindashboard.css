@@ -1,17 +1,17 @@
-/* AdminDashboard.css */
+/* admindashboard.css */
 
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #5b67f1, #9245e6);
-  color: #333;
 }
 
 .dashboard-container {
   min-height: 100vh;
   padding: 30px;
   text-align: center;
+  background: linear-gradient(135deg, #5b67f1, #9245e6);
+  color: #333;
 }
 
 .dashboard-title {

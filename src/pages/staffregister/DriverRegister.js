@@ -17,7 +17,7 @@ const BusManagementSystem = () => {
     city: '',
     district: '',
     nic: '',
-      licenseFile: null,
+    licenseFile: null,
     licenseNumber: '',
     licenseExpiry: '',
     experience: '',
@@ -324,7 +324,7 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="button-container">
-            <button className="back-button" onClick={()=>navigate("/")}>
+            <button className="back-button" onClick={()=>navigate("/admindashboard")}>
               Back
             </button>
             <button className="register-button" onClick={()=>navigate("/admindashboard")}>
