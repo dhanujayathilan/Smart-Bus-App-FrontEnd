@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './passengerregister.css'; // Import external CSS
+import './passenger_edit_profile.css'; // Import external CSS
 import { Link, useNavigate } from 'react-router-dom';
 
-const PassengerRegister = () => {
+const PassengerEditProfile = () => {
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -63,7 +63,7 @@ const PassengerRegister = () => {
 
       <div className="form-container-p-register">
         <div className="form-header">
-          <h2 className="form-title">Register Passenger</h2>
+          <h2 className="form-title">Edit Profile</h2>
         </div>
 
         <div className="form-content-p-register">
@@ -227,11 +227,11 @@ const PassengerRegister = () => {
           </div>
 
           <div className="button-container">
-            <button className="back-button" onClick={()=>navigate("/")}>
+            <button className="back-button" onClick={()=>navigate("/passengerdashboard")}>
               Back
             </button>
             <button className="register-button" onClick={()=>navigate("/passengerdashboard")}>
-              Register
+              Update
             </button>
           </div>
         </div>
@@ -240,4 +240,4 @@ const PassengerRegister = () => {
   );
 };
 
-export default PassengerRegister;
+export default PassengerEditProfile;

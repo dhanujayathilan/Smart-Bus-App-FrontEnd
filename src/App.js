@@ -14,6 +14,17 @@ import Route_and_Schedule from './pages/admin/Route_and_Schedule';
 import Admin_Send_Alert from './pages/admin/Admin_Send_Alert';
 import View_Analytics from './pages/admin/View_Analytics';
 import Profit_Management from './pages/admin/Profit_Management';
+import Add_Depot from './pages/admin/Add_Depot';
+
+import Staff_Dashboard from './pages/staff/Staff_Dashboard';
+import Edit_Staff_Profiles from './pages/staff/Edit_Staff_Profiles';
+import Staff_Help_Support from './pages/staff/Staff_Help_Support';
+import Staff_Feedback from './pages/staff/Staff_Feedback';
+
+import Passenger_Edit_Profile from './pages/passenger/Passenger_Edit_Profile';
+import Passenger_Feedback from './pages/passenger/Passenger_Feedback';
+import Passenger_Help_Support from './pages/passenger/Passenger_Help_Support';
+
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 
 function App() {
@@ -34,6 +45,17 @@ function App() {
         <Route path="/admin_send_alert" element={<Admin_Send_Alert />} />
         <Route path="/view_analytics" element={<View_Analytics />} />
         <Route path="/profit_management" element={<Profit_Management />} />
+        <Route path="/staff_dashboard" element={<Staff_Dashboard />} />
+        <Route path="/add_depot" element={<Add_Depot />} />
+
+        <Route path="/edit_staff_profile" element={<Edit_Staff_Profiles />} />
+        <Route path="/staff_help_support" element={<Staff_Help_Support />} />
+        <Route path="/staff_feedback" element={<Staff_Feedback />} />
+        
+        <Route path="/passenger_edit_profile" element={<Passenger_Edit_Profile />} />
+        <Route path="/passenger_feedback" element={<Passenger_Feedback />} />
+        <Route path="/passenger_help_support" element={<Passenger_Help_Support />} />
+
       </Routes>
     </Router>
   );

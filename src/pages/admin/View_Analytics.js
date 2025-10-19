@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './view_analytics.css';
 import { Link, useNavigate } from 'react-router-dom';
 
-const BusDashboard = () => {
+const ViewAnalytics = () => {
   const navigate = useNavigate();
   const [dateRange, setDateRange] = useState('last30');
   const [route, setRoute] = useState('route138');
@@ -203,4 +203,4 @@ const BusDashboard = () => {
   );
 };
 
-export default BusDashboard;
+export default ViewAnalytics;

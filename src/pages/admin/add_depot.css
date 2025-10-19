@@ -17,45 +17,45 @@
 }
 
 /* Tabs */
-.tab-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto 30px;
+.tabs1{
+    text-align: center;
+}
+.tabs {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 5px;
+  margin-bottom: 30px;
 }
 
 .tab {
-  flex: 1;
-  padding: 15px 30px;
-  background-color: rgba(255, 255, 255, 0.3);
   border: none;
-  border-radius: 25px;
+  background: transparent;
   color: white;
-  font-size: 16px;
   font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  transition: 0.3s;
 }
 
-.active-tab {
-  background-color: white;
-  color: #667eea;
+.tab.active {
+  background: white;
+  color: #333;
 }
 
 /* Form Container */
-.form-container {
+.form-container-depot {
   max-width: 900px;
   margin: 0 auto;
-  background-color: rgb(148, 222, 243);
+  background-color: rgb(95, 115, 225);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-.form-header {
-  background: linear-gradient(135deg, #5eead4 0%, #48bb78 100%);
+.form-header-depot {
+  background: linear-gradient(135deg, #ff4528 0%, #fcff63 100%);
   padding: 20px;
 }
 
@@ -66,13 +66,8 @@
   font-weight: bold;
 }
 
-.form-content {
+.form-content-depot {
   padding: 40px;
-  background: linear-gradient(
-    135deg,
-    rgba(102, 126, 234, 0.1) 0%,
-    rgba(118, 75, 162, 0.1) 100%
-  );
 }
 
 .row {
@@ -82,17 +77,18 @@
   margin-bottom: 20px;
 }
 
-.conductor-form-group {
+.form-group-depot {
   display: flex;
   flex-direction: column;
+  color: rgb(44, 43, 43);
 }
 
-.conductor-label {
-  color: rgb(0, 0, 0);
+.l-depot {
+  color: rgb(255, 255, 255);
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
-  text-shadow: 1px 1px 2px rgb(166, 185, 247);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 input,
@@ -106,6 +102,11 @@ textarea {
   color: #333;
   outline: none;
   backdrop-filter: blur(10px);
+}
+
+.input-color-depot {
+  
+  color: rgb(0, 0, 0);
 }
 
 textarea {

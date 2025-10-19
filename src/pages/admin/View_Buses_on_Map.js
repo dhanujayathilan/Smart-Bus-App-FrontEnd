@@ -11,7 +11,7 @@ const busIcon = new L.Icon({
   iconSize: [32, 32],
 });
 
-const BusManagementDashboard = () => {
+const ViewBusesonMap = () => {
   const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -148,4 +148,4 @@ const BusManagementDashboard = () => {
   );
 };
 
-export default BusManagementDashboard;
+export default ViewBusesonMap;

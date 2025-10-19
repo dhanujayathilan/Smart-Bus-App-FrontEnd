@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './conductorregister.css'; // Import external CSS
 import { Link, useNavigate } from 'react-router-dom';
 
-const BusManagementSystem = () => {
+const ConductorRegister = () => {
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -115,8 +115,8 @@ const BusManagementSystem = () => {
         <div className="form-content">
 
           <div className="row">
-            <div className="form-group">
-              <label>Staff Type:</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">Staff Type:</label>
               <select
                 name="staffType"
                 value={formData.staffType}
@@ -131,8 +131,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Full Name:</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">Full Name:</label>
               <input
                 type="text"
                 name="firstName"
@@ -141,8 +141,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>&nbsp;</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">&nbsp;</label>
               <input
                 type="text"
                 name="lastName"
@@ -154,8 +154,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Mobile Number:</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">Mobile Number:</label>
               <input
                 type="tel"
                 name="mobile"
@@ -164,8 +164,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>Email:</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">Email:</label>
               <input
                 type="email"
                 name="email"
@@ -177,8 +177,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Address:</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">Address:</label>
               <input
                 type="text"
                 name="addressLine1"
@@ -187,8 +187,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>&nbsp;</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">&nbsp;</label>
               <input
                 type="text"
                 name="addressLine2"
@@ -200,8 +200,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Date of Birth:</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">Date of Birth:</label>
               <input
                 type="text"
                 name="dob"
@@ -213,8 +213,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Gender:</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">Gender:</label>
               <select
                 name="gender"
                 value={formData.gender}
@@ -227,8 +227,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>District: </label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">District: </label>
               <input
                 type="text"
                 name="district"
@@ -237,8 +237,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>City: </label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">City: </label>
               <input
                 type="text"
                 name="city"
@@ -250,8 +250,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>NIC: </label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">NIC: </label>
               <input
                 type="text"
                 name="nic"
@@ -263,8 +263,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>How Many Years of Experience:</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">How Many Years of Experience:</label>
               <input
                 type="text"
                 name="experience"
@@ -276,8 +276,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Upload NIC Copy:</label>
+            <div className="conductor-form-group">
+              <label className="conductor-label">Upload NIC Copy:</label>
               <input
                 type="file"
                 name="nicFile"
@@ -288,12 +288,13 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="full-width">
-            <label>Please provide details about your previous employment:</label>
+            <div className="conductor-form-group">
+            <label className="conductor-label">Please provide details about your previous employment:</label>
             <textarea
               name="previousEmployment"
               value={formData.previousEmployment}
               onChange={handleChange}
-            />
+            /></div>
           </div>
 
           <div className="button-container">
@@ -310,4 +311,4 @@ const BusManagementSystem = () => {
   );
 };
 
-export default BusManagementSystem;
+export default ConductorRegister;

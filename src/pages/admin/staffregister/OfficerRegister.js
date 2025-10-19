@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './officerregister.css'; // Import external CSS
 import { Link, useNavigate } from 'react-router-dom';
 
-const BusManagementSystem = () => {
+const OfficerRegister = () => {
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -112,8 +112,8 @@ const BusManagementSystem = () => {
         <div className="form-content">
 
           <div className="row">
-            <div className="form-group">
-              <label>Staff Type:</label>
+            <div className="officer-form-group">
+              <label className="officer-label">Staff Type:</label>
               <select
                 name="staffType"
                 value={formData.staffType}
@@ -128,8 +128,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Full Name:</label>
+            <div className="officer-form-group">
+              <label className="officer-label">Full Name:</label>
               <input
                 type="text"
                 name="firstName"
@@ -138,8 +138,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>&nbsp;</label>
+            <div className="officer-form-group">
+              <label className="officer-label">&nbsp;</label>
               <input
                 type="text"
                 name="lastName"
@@ -151,8 +151,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Mobile Number:</label>
+            <div className="officer-form-group">
+              <label className="officer-label">Mobile Number:</label>
               <input
                 type="tel"
                 name="mobile"
@@ -161,8 +161,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>Email:</label>
+            <div className="officer-form-group">
+              <label className="officer-label">Email:</label>
               <input
                 type="email"
                 name="email"
@@ -174,8 +174,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Address:</label>
+            <div className="officer-form-group">
+              <label className="officer-label">Address:</label>
               <input
                 type="text"
                 name="addressLine1"
@@ -184,8 +184,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>&nbsp;</label>
+            <div className="officer-form-group">
+              <label className="officer-label">&nbsp;</label>
               <input
                 type="text"
                 name="addressLine2"
@@ -197,8 +197,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>District: </label>
+            <div className="officer-form-group">
+              <label className="officer-label">District: </label>
               <input
                 type="text"
                 name="district"
@@ -207,8 +207,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>City: </label>
+            <div className="officer-form-group">
+              <label className="officer-label">City: </label>
               <input
                 type="text"
                 name="city"
@@ -220,8 +220,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>NIC: </label>
+            <div className="officer-form-group">
+              <label className="officer-label">NIC: </label>
               <input
                 type="text"
                 name="nic"
@@ -233,8 +233,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Designation: </label>
+            <div className="officer-form-group">
+              <label className="officer-label">Designation: </label>
               <select
                 name="designation"
                 value={formData.designation}
@@ -246,8 +246,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>Department: </label>
+            <div className="officer-form-group">
+              <label className="officer-label">Department: </label>
               <input
                 type="text"
                 name="department"
@@ -259,8 +259,8 @@ const BusManagementSystem = () => {
           </div>
 
           <div className="row">
-            <div className="form-group">
-              <label>How Many Years of Experience:</label>
+            <div className="officer-form-group">
+              <label className="officer-label">How Many Years of Experience:</label>
               <input
                 type="text"
                 name="experience"
@@ -286,4 +286,4 @@ const BusManagementSystem = () => {
   );
 };
 
-export default BusManagementSystem;
+export default OfficerRegister;

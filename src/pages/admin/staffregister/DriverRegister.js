@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './driverregister.css'; // Import external CSS
 import { Link, useNavigate } from 'react-router-dom';
 
-const BusManagementSystem = () => {
+const DriverRegister = () => {
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -86,40 +86,19 @@ const BusManagementSystem = () => {
   };
 
   return (
-    <div className="bus-container">
-      <h1 className="bus-title">Smart Public Bus Management System</h1>
+    <div className="driver-container">
+      <h1 className="driver-title">Smart Public Bus Management System</h1>
 
-      {/* <div className="tab-container">
-        <button
-          className={`tab ${activeTab === 'admin' ? 'active-tab' : ''}`}
-          onClick={() => setActiveTab('admin')}
-        >
-          Admin Dashboard
-        </button>
-        <button
-          className={`tab ${activeTab === 'staff' ? 'active-tab' : ''}`}
-          onClick={() => setActiveTab('staff')}
-        >
-          Staff Interface
-        </button>
-        <button
-          className={`tab ${activeTab === 'passenger' ? 'active-tab' : ''}`}
-          onClick={() => setActiveTab('passenger')}
-        >
-          Passenger Portal
-        </button>
-      </div> */}
-
-      <div className="form-container">
+      <div className="driver-form-container">
         <div className="form-header">
           <h2 className="form-title">Register Staff</h2>
         </div>
 
-        <div className="form-content">
+        <div className="driver-form-content">
 
-          <div className="row">
-            <div className="form-group">
-              <label>Staff Type:</label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">Staff Type:</label>
               <select
                 name="staffType"
                 value={formData.staffType}
@@ -133,9 +112,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>Full Name:</label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">Full Name:</label>
               <input
                 type="text"
                 name="firstName"
@@ -144,8 +123,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>&nbsp;</label>
+            <div className="driver-form-group">
+              <label className="driver-label">&nbsp;</label>
               <input
                 type="text"
                 name="lastName"
@@ -156,9 +135,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>Mobile Number:</label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">Mobile Number:</label>
               <input
                 type="tel"
                 name="mobile"
@@ -167,8 +146,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>Email:</label>
+            <div className="driver-form-group">
+              <label className="driver-label">Email:</label>
               <input
                 type="email"
                 name="email"
@@ -179,9 +158,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>Address:</label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">Address:</label>
               <input
                 type="text"
                 name="addressLine1"
@@ -190,8 +169,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>&nbsp;</label>
+            <div className="driver-form-group">
+              <label className="driver-label">&nbsp;</label>
               <input
                 type="text"
                 name="addressLine2"
@@ -202,9 +181,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>Date of Birth:</label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">Date of Birth:</label>
               <input
                 type="text"
                 name="dob"
@@ -215,9 +194,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>Gender:</label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">Gender:</label>
               <select
                 name="gender"
                 value={formData.gender}
@@ -229,9 +208,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>District: </label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">District: </label>
               <input
                 type="text"
                 name="district"
@@ -240,8 +219,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>City: </label>
+            <div className="driver-form-group">
+              <label className="driver-label">City: </label>
               <input
                 type="text"
                 name="city"
@@ -252,9 +231,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>NIC: </label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">NIC: </label>
               <input
                 type="text"
                 name="nic"
@@ -265,9 +244,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>Driver's License Number:</label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">Driver's License Number:</label>
               <input
                 type="text"
                 name="licenseNumber"
@@ -276,8 +255,8 @@ const BusManagementSystem = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label>Driver's License Expiration Date:</label>
+            <div className="driver-form-group">
+              <label className="driver-label">Driver's License Expiration Date:</label>
               <input
                 type="text"
                 name="licenseExpiry"
@@ -288,9 +267,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>How Many Years of Experience:</label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">How Many Years of Experience:</label>
               <input
                 type="text"
                 name="experience"
@@ -301,9 +280,9 @@ const BusManagementSystem = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group">
-              <label>Upload License Copy:</label>
+          <div className="driver-row">
+            <div className="driver-form-group">
+              <label className="driver-label">Upload License Copy:</label>
               <input
                 type="file"
                 name="licenseFile"
@@ -315,12 +294,13 @@ const BusManagementSystem = () => {
 
 
           <div className="full-width">
-            <label>Please provide details about your previous employment:</label>
+            <div className="driver-form-group">
+            <label className="driver-label">Please provide details about your previous employment:</label>
             <textarea
               name="previousEmployment"
               value={formData.previousEmployment}
               onChange={handleChange}
-            />
+            /></div>
           </div>
 
           <div className="button-container">
@@ -337,4 +317,4 @@ const BusManagementSystem = () => {
   );
 };
 
-export default BusManagementSystem;
+export default DriverRegister;

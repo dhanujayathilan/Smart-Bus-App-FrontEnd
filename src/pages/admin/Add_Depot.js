@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './route_and_schedule.css'; // Import external CSS
+import './add_depot.css'; // Import external CSS
 import { Link, useNavigate } from 'react-router-dom';
 
-const AddSchedule = () => {
+const AddDepot = () => {
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
     bus_number: '',
@@ -12,8 +12,6 @@ const AddSchedule = () => {
     bus_route: '',
     driver: '',
     conductor: '',
-    shift_time: '',
-    start_date: '',
   });
 
   const [activeTab, setActiveTab] = useState('admin');
@@ -42,8 +40,6 @@ const AddSchedule = () => {
       bus_route: '',
       driver: '',
       conductor: '',
-      shift_time: '',
-      start_date: '',
     });
   };
 
@@ -59,67 +55,17 @@ const AddSchedule = () => {
         <button className="tab">Passenger Portal</button>
       </div></div>
 
-      <div className="form-container-schedule">
-        <div className="form-header-schedule">
-          <h2 className="form-title">Bus Schedule</h2>
+      <div className="form-container-depot">
+        <div className="form-header-depot">
+          <h2 className="form-title">Add Depot</h2>
         </div>
 
-        <div className="form-content-schedule">
+        <div className="form-content-depot">
 
           <div className="row">
-            <div className="form-group-schedule">
-              <label className="l-schedule">Select the Depot:</label>
-              <select className="input-color-schedule"
-                name="d_name"
-                value={formData.d_name}
-                onChange={handleChange}
-              >
-                <option>Horana</option>
-                <option>Ratnapura</option>
-              </select>
-            </div>
-            
-          </div>
-
-          <div className="row">
-            <div className="form-group-schedule">
-              <label className="l-schedule">Bus Route:</label>
-              <select className="input-color-schedule"
-                name="bus_route"
-                value={formData.bus_route}
-                onChange={handleChange}
-              >
-                <option>120</option>
-                <option>285</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="form-group-schedule">
-              <label className="l-schedule">To:</label>
-              <input className="input-color-schedule"
-                type="text"
-                name="to"
-                value={formData.to}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group-schedule">
-              <label className="l-schedule">From:</label>
-              <input className="input-color-schedule"
-                type="text"
-                name="from"
-                value={formData.from}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="form-group-schedule">
-              <label className="l-schedule">Bus Number:</label>
-              <select className="input-color-schedule"
+            <div className="form-group-depot">
+              <label className="l-depot">Bus Number:</label>
+              <select className="input-color-depot"
                 name="bus_number"
                 value={formData.bus_number}
                 onChange={handleChange}
@@ -132,9 +78,59 @@ const AddSchedule = () => {
           </div>
 
           <div className="row">
-            <div className="form-group-schedule">
-              <label className="l-schedule">Driver:</label>
-              <select className="input-color-schedule"
+            <div className="form-group-depot">
+              <label className="l-depot">Depot Name:</label>
+              <select className="input-color-depot"
+                name="d_name"
+                value={formData.d_name}
+                onChange={handleChange}
+              >
+                <option>Horana</option>
+                <option>Ratnapura</option>
+              </select>
+            </div>
+            
+          </div>
+
+          <div className="row">
+            <div className="form-group-depot">
+              <label className="l-depot">To:</label>
+              <input className="input-color-depot"
+                type="text"
+                name="to"
+                value={formData.to}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group-depot">
+              <label className="l-depot">From:</label>
+              <input className="input-color-depot"
+                type="text"
+                name="from"
+                value={formData.from}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="form-group-depot">
+              <label className="l-depot">Bus Route:</label>
+              <select className="input-color-depot"
+                name="bus_route"
+                value={formData.bus_route}
+                onChange={handleChange}
+              >
+                <option>120</option>
+                <option>285</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="form-group-depot">
+              <label className="l-depot">Driver:</label>
+              <select className="input-color-depot"
                 name="driver"
                 value={formData.driver}
                 onChange={handleChange}
@@ -143,9 +139,12 @@ const AddSchedule = () => {
                 <option>Kamal</option>
               </select>
             </div>
-            <div className="form-group-schedule">
-              <label className="l-schedule">Conductor:</label>
-              <select className="input-color-schedule"
+          </div>
+
+          <div className="row">
+            <div className="form-group-depot">
+              <label className="l-depot">Conductor:</label>
+              <select className="input-color-depot"
                 name="conductor"
                 value={formData.conductor}
                 onChange={handleChange}
@@ -153,31 +152,6 @@ const AddSchedule = () => {
                 <option>Nimal</option>
                 <option>Saman</option>
               </select>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="form-group-schedule">
-              <label className="l-schedule">Shift Time:</label>
-              <input className="input-color-schedule"
-                type="text"
-                name="shift_time"
-                placeholder="Shift Time"
-                value={formData.shift_time}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="form-group-schedule">
-              <label className="l-schedule">Start Date:</label>
-              <input className="input-color-schedule"
-                type="date"
-                name="start_date"
-                value={formData.start_date}
-                onChange={handleChange}
-              />
             </div>
           </div>
 
@@ -195,4 +169,4 @@ const AddSchedule = () => {
   );
 };
 
-export default AddSchedule;
+export default AddDepot;

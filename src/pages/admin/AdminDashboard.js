@@ -36,11 +36,15 @@ export default function AdminDashboard() {
               </div>
             </div>
             <div className="button-group">
-              <button onClick={()=>navigate("/route_and_schedule")}>Route & Schedule</button>
               <div className="row-buttons">
-                <button onClick={()=>navigate("/admin_send_alert")}>Send Alert</button>
-                <button onClick={()=>navigate("/view_analytics")}>View Analytics</button>
+                <button onClick={()=>navigate("/route_and_schedule")}>Schedule</button>
+                <button onClick={()=>navigate("/add_depot")}>Depot</button>
               </div>
+
+              <button onClick={()=>navigate("/admin_send_alert")}>Send Alert</button>
+              <button onClick={()=>navigate("/view_analytics")}>View Analytics</button>
+              
+              
               <button onClick={()=>navigate("/profit_management")}>Profit Management</button>
             </div>
           </div>

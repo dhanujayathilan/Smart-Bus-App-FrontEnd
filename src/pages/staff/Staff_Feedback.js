@@ -1,32 +1,32 @@
 import React from "react";
-import "./admin_send_alert.css";
+import "./staff_feedback.css";
 import { Link, useNavigate } from 'react-router-dom';
 
-const AdminSendAlert = () => {
+const StaffFeedback = () => {
   const navigate = useNavigate();
   return (
-    <div className="dashboard-containerr">
+    <div className="dashboard-containerrr">
       <h1 className="title">Smart Public Bus Management System</h1>
 
       <div className="tab-container">
-        <button className="tab active">Admin Dashboard</button>
-        <button className="tab">Driver Interface</button>
+        <button className="tab">Admin Dashboard</button>
+        <button className="tab active">Staff Interface</button>
         <button className="tab">Passenger Portal</button>
       </div>
 
       <div className="content-box">
-        <div className="help-header">Send Alerts</div>
+        <div className="help-header">Give Feedback</div>
 
         <div className="form-box">
           <label>Subject:</label>
           <input type="text" className="input-field" placeholder="Enter subject" />
 
-          <label>Alert:</label>
-          <textarea className="textarea-field" placeholder="Enter alert message"></textarea>
+          <label>Feeback:</label>
+          <textarea className="textarea-field" placeholder="Enter Feedback"></textarea>
 
           <div className="button-row">
-            <button className="btn cancel" onClick={()=>navigate("/admindashboard")}>Cancel</button>
-            <button className="btn send">Send</button>
+            <button className="btn cancel" onClick={()=>navigate("/staff_dashboard")}>Cancel</button>
+            <button className="btn send">Submit</button>
           </div>
         </div>
       </div>
@@ -34,4 +34,4 @@ const AdminSendAlert = () => {
   );
 };
 
-export default AdminSendAlert;
+export default StaffFeedback;
