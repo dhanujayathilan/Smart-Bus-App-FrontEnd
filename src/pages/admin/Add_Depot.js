@@ -127,34 +127,6 @@ const AddDepot = () => {
             </div>
           </div>
 
-          <div className="row">
-            <div className="form-group-depot">
-              <label className="l-depot">Driver:</label>
-              <select className="input-color-depot"
-                name="driver"
-                value={formData.driver}
-                onChange={handleChange}
-              >
-                <option>Amal</option>
-                <option>Kamal</option>
-              </select>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="form-group-depot">
-              <label className="l-depot">Conductor:</label>
-              <select className="input-color-depot"
-                name="conductor"
-                value={formData.conductor}
-                onChange={handleChange}
-              >
-                <option>Nimal</option>
-                <option>Saman</option>
-              </select>
-            </div>
-          </div>
-
           <div className="button-container">
             <button className="back-button" onClick={()=>navigate("/admindashboard")}>
               Back
