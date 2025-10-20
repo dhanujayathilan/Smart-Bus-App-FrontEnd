@@ -134,7 +134,7 @@ const PassengerDashboard = () => {
                 onChange={(e) => setTravelDate(e.target.value)}
               />
             </div>
-            <button className="btn-search-buses">Search Buses</button>
+            <button className="btn-search-buses" onClick={()=>navigate("/bus_booking")}>Search Buses</button>
           </div>
         </div>
 

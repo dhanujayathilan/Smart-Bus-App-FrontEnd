@@ -29,6 +29,8 @@ import Edit_Conductor_Profile from './pages/staff/Edit_Conductor_Profile';
 import Passenger_Edit_Profile from './pages/passenger/Passenger_Edit_Profile';
 import Passenger_Feedback from './pages/passenger/Passenger_Feedback';
 import Passenger_Help_Support from './pages/passenger/Passenger_Help_Support';
+import Bus_Booking from './pages/passenger/Bus_Booking';
+import Book_Seat from './pages/passenger/Book_Seat';
 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 
@@ -66,6 +68,8 @@ function App() {
         <Route path="/passenger_edit_profile" element={<Passenger_Edit_Profile />} />
         <Route path="/passenger_feedback" element={<Passenger_Feedback />} />
         <Route path="/passenger_help_support" element={<Passenger_Help_Support />} />
+        <Route path="/bus_booking" element={<Bus_Booking />} />
+        <Route path="/book_seat" element={<Book_Seat />} />
 
       </Routes>
     </Router>
