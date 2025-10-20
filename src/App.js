@@ -21,6 +21,11 @@ import Edit_Staff_Profiles from './pages/staff/Edit_Staff_Profiles';
 import Staff_Help_Support from './pages/staff/Staff_Help_Support';
 import Staff_Feedback from './pages/staff/Staff_Feedback';
 
+import Edit_Admin_Profile from './pages/staff/Edit_Admin_Profile';
+import Edit_Officer_Profile from './pages/staff/Edit_Officer_Profile';
+import Edit_Driver_Profile from './pages/staff/Edit_Driver_Profile';
+import Edit_Conductor_Profile from './pages/staff/Edit_Conductor_Profile';
+
 import Passenger_Edit_Profile from './pages/passenger/Passenger_Edit_Profile';
 import Passenger_Feedback from './pages/passenger/Passenger_Feedback';
 import Passenger_Help_Support from './pages/passenger/Passenger_Help_Support';
@@ -51,6 +56,12 @@ function App() {
         <Route path="/edit_staff_profile" element={<Edit_Staff_Profiles />} />
         <Route path="/staff_help_support" element={<Staff_Help_Support />} />
         <Route path="/staff_feedback" element={<Staff_Feedback />} />
+
+        
+        <Route path="/edit_admin_profile" element={<Edit_Admin_Profile />} />
+        <Route path="/edit_officer_profile" element={<Edit_Officer_Profile />} />
+        <Route path="/edit_driver_Profile" element={<Edit_Driver_Profile />} />
+        <Route path="/edit_conductor_profile" element={<Edit_Conductor_Profile />} />
         
         <Route path="/passenger_edit_profile" element={<Passenger_Edit_Profile />} />
         <Route path="/passenger_feedback" element={<Passenger_Feedback />} />
